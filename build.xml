@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="nuxeo-rss-reader" default="usage" basedir=".">
+<project name="nuxeo-survey" default="usage" basedir=".">
 
   <property file="build.properties"/>
 
@@ -16,13 +16,13 @@
 
   <target name="usage">
     <echo message="usage: ant [build|build-with-tests|deploy-tomcat]" />
-    <echo message="ant build              => Build Nuxeo RSS Reader Module" />
-    <echo message="ant build-with-tests   => Build and Test Nuxeo RSS Reader Module" />
-    <echo message="ant deploy-tomcat      => Build Nuxeo RSS Reader Module  and deploy it on a Tomcat instance" />
+    <echo message="ant build              => Build Nuxeo Survey Module" />
+    <echo message="ant build-with-tests   => Build and Test Nuxeo Survey Module" />
+    <echo message="ant deploy-tomcat      => Build Nuxeo Survey Module  and deploy it on a Tomcat instance" />
     <echo message="integration-test       => Launch selenium tests suite" />
   </target>
 
-  <target name="build" depends="build-unix,build-windows" description="Build Nuxeo RSS Reader"/>
+  <target name="build" depends="build-unix,build-windows" description="Build Nuxeo Survey"/>
   <target name="build-unix" if="osfamily-unix">
     <exec executable="mvn" failonerror="true">
       <arg value="clean" />
@@ -42,7 +42,7 @@
     </exec>
   </target>
 
-  <target name="build-with-tests" depends="build-with-tests-unix,build-with-tests-windows" description="Build Nuxeo RSS Reader"/>
+  <target name="build-with-tests" depends="build-with-tests-unix,build-with-tests-windows" description="Build Nuxeo Survey"/>
   <target name="build-with-tests-unix" if="osfamily-unix">
     <exec executable="mvn" failonerror="true">
       <arg value="clean" />
@@ -71,7 +71,7 @@
     </exec>
   </target>
 
-  <target name="deploy-tomcat" depends="build" description="Deploy RSS Reader Module  on a Tomcat instance">
+  <target name="deploy-tomcat" depends="build" description="Deploy Survey Module  on a Tomcat instance">
     <copy todir="${tomcat.bundles.dir}" overwrite="true" flatten="true">
       <fileset dir="${basedir}">
         <include name="**/target/*.jar" />
