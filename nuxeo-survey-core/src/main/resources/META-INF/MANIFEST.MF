@@ -6,4 +6,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: Nuxeo
 Bundle-Version: 5.4.3.qualifier
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: nuxeo-survey-core
+Bundle-SymbolicName: org.nuxeo.ecp.survey.core
+Nuxeo-Component: OSGI-INF/nuxeo-survey-core-types-contrib.xml,
+ OSGI-INF/nuxeo-survey-adapters-contrib.xml

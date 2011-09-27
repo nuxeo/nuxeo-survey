@@ -28,6 +28,16 @@
         <artifactId>nuxeo-survey-core</artifactId>
         <version>${nuxeo.features.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.nuxeo.ecm.platform</groupId>
+        <artifactId>nuxeo-platform-document-routing-api</artifactId>
+        <version>${nuxeo.features.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.ecm.platform</groupId>
+        <artifactId>nuxeo-platform-document-routing-core</artifactId>
+        <version>${nuxeo.features.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   
