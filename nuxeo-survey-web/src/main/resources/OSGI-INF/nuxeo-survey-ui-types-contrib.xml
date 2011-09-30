@@ -9,15 +9,29 @@
       <subtypes>
         <type>Survey</type>
       </subtypes>
+      <deniedSubtypes>
+        <type>DocumentRoute</type>
+      </deniedSubtypes>
     </type>
 
     <type id="Folder">
       <subtypes>
         <type>Survey</type>
       </subtypes>
+      <deniedSubtypes>
+        <type>DocumentRoute</type>
+      </deniedSubtypes>
+
     </type>
 
     <type id="Survey">
+      <subtypes>
+        <type>BranchedQuestionContainer</type>
+        <type>Question</type>
+      </subtypes>
+    </type>
+
+    <type id="StepFolder">
       <subtypes>
         <type>BranchedQuestionContainer</type>
         <type>Question</type>
@@ -29,13 +43,25 @@
       <icon>/icons/route.png</icon>
       <bigIcon>/icons/route_100.png</bigIcon>
       <default-view>view_documents</default-view>
+      <layouts mode="any">
+        <layout>question</layout>
+      </layouts>
+      <layouts mode="edit">
+        <layout>question</layout>
+      </layouts>
     </type>
 
-     <type id="BranchedQuestionContainer" coreType="BranchedQuestionContainer">
+    <type id="BranchedQuestionContainer" coreType="BranchedQuestionContainer">
       <label>BranchedQuestionContainer</label>
       <icon>/icons/route.png</icon>
       <bigIcon>/icons/route_100.png</bigIcon>
       <default-view>view_documents</default-view>
+      <subtypes>
+        <type>Question</type>
+      </subtypes>
+      <deniedSubtypes>
+        <type>BranchedQuestionContainer</type>
+      </deniedSubtypes>
     </type>
 
     <type id="Survey" coreType="Survey">
@@ -51,10 +77,11 @@
       </subtypes>
       <layouts mode="any">
         <layout>heading</layout>
+        <layout>survey</layout>
       </layouts>
       <layouts mode="edit">
         <layout>heading</layout>
-        <layout>dublincore</layout>
+        <layout>survey</layout>
       </layouts>
       <layouts mode="summary">
         <layout>summary_document_route_layout</layout>

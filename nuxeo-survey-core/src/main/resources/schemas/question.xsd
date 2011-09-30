@@ -6,7 +6,7 @@
     <xs:list itemType="xs:string" />
   </xs:simpleType>
 
-  <xs:element name="question" type="xs:string" />
+  <!--  the question text will be saved in title -->
   <xs:element name="answers" type="nxs:stringArrayType" />
 
 </xs:schema>

@@ -28,6 +28,10 @@ public class Constants {
 
     public static final String SURVEY_DOCUMENT_TYPE = "Survey";
 
+    public static final String QUESTION_BRANCH_DOCUMENT_TYPE = "StepFolder";
+
+    public static final String BRANCHED_QUESTION_CONTAINER_DOCUMENT_TYPE = "BranchedQuestionContainer";
+
     public static final String QUESTION_DOCUMENT_TYPE = "Question";
 
     public static final String SURVEY_START_DATE_PROPERTY = "survey:start_date";
@@ -38,8 +42,9 @@ public class Constants {
 
     public static final String SURVEY_FINAL_TEXT_PROPERTY = "survey:finalText";
 
-    public static final String QUESTION_PROPERTY = "question:question";
+    public static final String QUESTION_PROPERTY = "dc:title";
 
     public static final String ANSWERS_PROPERTY = "question:answers";
+
 
 }

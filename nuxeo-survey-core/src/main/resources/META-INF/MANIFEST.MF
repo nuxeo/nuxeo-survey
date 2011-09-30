@@ -9,4 +9,5 @@ Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.nuxeo.ecp.survey.core
 Nuxeo-Component: OSGI-INF/nuxeo-survey-core-types-contrib.xml,
  OSGI-INF/nuxeo-survey-adapters-contrib.xml,
- OSGI-INF/nuxeo-survey-life-cycle-contrib.xml
+ OSGI-INF/nuxeo-survey-life-cycle-contrib.xml,
+ OSGI-INF/nuxeo-survey-listeners-contrib.xml
