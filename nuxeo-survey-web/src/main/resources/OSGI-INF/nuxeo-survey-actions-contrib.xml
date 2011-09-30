@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.nuxeo.ecm.suvery.actions">
+
+  <require>org.nuxeo.ecm.platform.routing.actions</require>
+
+    <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+      point="filters">
+
+      <filter id="isRoute">
+        <rule grant="true">
+          <type>Survey</type>
+        </rule>
+      </filter>
+
+      <filter id="isNotRoute">
+        <rule grant="false">
+          <type>Survey</type>
+        </rule>
+      </filter>
+
+    </extension>
+</component>

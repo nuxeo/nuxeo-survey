@@ -1,0 +1,11 @@
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Manifest-Version: 1.0
+Bundle-Name: nuxeo-survey-web
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: Nuxeo
+Bundle-Version: 5.4.3.qualifier
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.nuxeo.ecp.survey.web
+Nuxeo-Component: OSGI-INF/nuxeo-survey-ui-types-contrib.xml,
+ OSGI-INF/nuxeo-survey-actions-contrib.xml

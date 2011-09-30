@@ -1,0 +1,72 @@
+<component name="org.nuxeo.ecm.suvery.web.ui.types" version="1.0">
+
+  <require>org.nuxeo.ecm.platform.routing.types</require>
+
+  <extension target="org.nuxeo.ecm.platform.types.TypeService"
+    point="types">
+
+    <type id="Workspace">
+      <subtypes>
+        <type>Survey</type>
+      </subtypes>
+    </type>
+
+    <type id="Folder">
+      <subtypes>
+        <type>Survey</type>
+      </subtypes>
+    </type>
+
+    <type id="Survey">
+      <subtypes>
+        <type>BranchedQuestionContainer</type>
+        <type>Question</type>
+      </subtypes>
+    </type>
+
+    <type id="Question" coreType="Question">
+      <label>Question</label>
+      <icon>/icons/route.png</icon>
+      <bigIcon>/icons/route_100.png</bigIcon>
+      <default-view>view_documents</default-view>
+    </type>
+
+     <type id="BranchedQuestionContainer" coreType="BranchedQuestionContainer">
+      <label>BranchedQuestionContainer</label>
+      <icon>/icons/route.png</icon>
+      <bigIcon>/icons/route_100.png</bigIcon>
+      <default-view>view_documents</default-view>
+    </type>
+
+    <type id="Survey" coreType="Survey">
+      <label>Survey</label>
+      <icon>/icons/route.png</icon>
+      <bigIcon>/icons/route_100.png</bigIcon>
+      <category>Collaborative</category>
+      <description>Folder.description</description>
+      <default-view>view_documents</default-view>
+      <subtypes>
+        <type>Question</type>
+        <type>BranchedQuestionContainer</type>
+      </subtypes>
+      <layouts mode="any">
+        <layout>heading</layout>
+      </layouts>
+      <layouts mode="edit">
+        <layout>heading</layout>
+        <layout>dublincore</layout>
+      </layouts>
+      <layouts mode="summary">
+        <layout>summary_document_route_layout</layout>
+      </layouts>
+      <contentViews category="content">
+        <contentView>orderable_document_content</contentView>
+      </contentViews>
+      <contentViews category="trash_content">
+        <contentView>document_trash_content</contentView>
+      </contentViews>
+    </type>
+
+  </extension>
+
+</component>

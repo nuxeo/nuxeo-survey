@@ -19,6 +19,7 @@
   
   <modules>
     <module>nuxeo-survey-core</module>
+    <module>nuxeo-survey-web</module>
   </modules>
   
   <dependencyManagement>
@@ -26,6 +27,11 @@
       <dependency>
         <groupId>org.nuxeo.survery</groupId>
         <artifactId>nuxeo-survey-core</artifactId>
+        <version>${nuxeo.features.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.survery</groupId>
+        <artifactId>nuxeo-survey-web</artifactId>
         <version>${nuxeo.features.version}</version>
       </dependency>
       <dependency>
