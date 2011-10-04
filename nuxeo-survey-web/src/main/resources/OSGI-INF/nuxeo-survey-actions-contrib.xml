@@ -4,20 +4,26 @@
 
   <require>org.nuxeo.ecm.platform.routing.actions</require>
 
-    <extension target="org.nuxeo.ecm.platform.actions.ActionService"
-      point="filters">
+  <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+    point="filters">
 
-      <filter id="isRoute">
-        <rule grant="true">
-          <type>Survey</type>
-        </rule>
-      </filter>
+    <filter id="isRoute">
+      <rule grant="true">
+        <type>Survey</type>
+      </rule>
+    </filter>
 
-      <filter id="isNotRoute">
-        <rule grant="false">
-          <type>Survey</type>
-        </rule>
-      </filter>
+    <filter id="isNotRoute">
+      <rule grant="false">
+        <type>Survey</type>
+      </rule>
+    </filter>
 
-    </extension>
+    <filter id="isBranchedQuestion">
+      <rule grant="true">
+        <condition>#{changeableDocument.type == 'BranchedQuestion'}</condition>
+      </rule>
+    </filter>
+
+  </extension>
 </component>

@@ -28,9 +28,11 @@ public class Constants {
 
     public static final String SURVEY_DOCUMENT_TYPE = "Survey";
 
-    public static final String QUESTION_BRANCH_DOCUMENT_TYPE = "StepFolder";
+    public static final String QUESTION_BRANCH_DOCUMENT_TYPE = "QuestionBranch";
 
     public static final String BRANCHED_QUESTION_CONTAINER_DOCUMENT_TYPE = "BranchedQuestionContainer";
+
+    public static final String BRANCHED_QUESTION_DOCUMENT_TYPE = "BranchedQuestion";
 
     public static final String QUESTION_DOCUMENT_TYPE = "Question";
 

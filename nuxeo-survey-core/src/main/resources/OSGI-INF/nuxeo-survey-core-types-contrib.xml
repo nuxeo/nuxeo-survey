@@ -15,22 +15,29 @@
     <doctype name="Survey" extends="DocumentRoute">
       <schema name="survey" />
       <subtypes>
-        <type>BranchedQuestionContainer</type>
         <type>Question</type>
+        <type>BranchedQuestionContainer</type>
+      </subtypes>
+    </doctype>
+
+    <doctype name="QuestionBranch" extends="StepFolder">
+      <subtypes>
+        <type>Question</type>
+        <type>BranchedQuestionContainer</type>
       </subtypes>
     </doctype>
 
     <doctype name="Question" extends="DocumentRouteStep">
-      <schema name="common" />
-      <schema name="dublincore" />
-      <schema name="uid" />
+    </doctype>
+
+    <doctype name="BranchedQuestion" extends="Question">
       <schema name="question" />
     </doctype>
 
     <doctype name="BranchedQuestionContainer" extends="ConditionalStepFolder">
       <subtypes>
-        <type>StepFolder</type>
-        <type>Question</type>
+        <type>QuestionBranch</type>
+        <type>BranchedQuestion</type>
       </subtypes>
     </doctype>
 

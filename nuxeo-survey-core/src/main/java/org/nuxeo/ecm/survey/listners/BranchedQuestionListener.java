@@ -17,8 +17,8 @@
 package org.nuxeo.ecm.survey.listners;
 
 import static org.nuxeo.ecm.survey.Constants.BRANCHED_QUESTION_CONTAINER_DOCUMENT_TYPE;
+import static org.nuxeo.ecm.survey.Constants.BRANCHED_QUESTION_DOCUMENT_TYPE;
 import static org.nuxeo.ecm.survey.Constants.QUESTION_BRANCH_DOCUMENT_TYPE;
-import static org.nuxeo.ecm.survey.Constants.QUESTION_DOCUMENT_TYPE;
 
 import org.nuxeo.ecm.core.api.ClientException;
 import org.nuxeo.ecm.core.api.CoreSession;
@@ -52,7 +52,7 @@ public class BranchedQuestionListener implements EventListener {
             if (BRANCHED_QUESTION_CONTAINER_DOCUMENT_TYPE.equals(docType)) {
                 doc.setPropertyValue("dc:title", "Empty Container");
                 session.saveDocument(doc);
-            } else if (QUESTION_DOCUMENT_TYPE.equals(docType)) {
+            } else if (BRANCHED_QUESTION_DOCUMENT_TYPE.equals(docType)) {
                 DocumentModel parent = session.getDocument(doc.getParentRef());
                 if (BRANCHED_QUESTION_CONTAINER_DOCUMENT_TYPE.equals(parent.getType())) {
                     // we are in a branched question case

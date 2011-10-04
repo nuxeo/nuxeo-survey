@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<component name="org.nuxeo.ecm.survey.lifecycle"
-  version="1.0">
+<component name="org.nuxeo.ecm.survey.lifecycle" version="1.0">
 
   <require>org.nuxeo.ecm.platform.routing.lifecycle.contrib</require>
 
@@ -8,13 +7,20 @@
   <extension target="org.nuxeo.ecm.core.lifecycle.LifeCycleService"
     point="types">
     <types>
-      <type name="Survey" noRecursionForTransitions="toValidate,toReady,toRunning,toDone,toCanceled">
+      <type name="Survey"
+        noRecursionForTransitions="toValidate,toReady,toRunning,toDone,toCanceled">
         documentRouteElement
       </type>
-      <type name="BranchedQuestionContainer" noRecursionForTransitions="toValidated,toReady,toRunning,toDone,toCanceled">
+      <type name="BranchedQuestionContainer"
+        noRecursionForTransitions="toValidated,toReady,toRunning,toDone,toCanceled">
+        documentRouteElement
+      </type>
+      <type name="QuestionBranch"
+        noRecursionForTransitions="toValidated,toReady,toRunning,toDone,toCanceled">
         documentRouteElement
       </type>
       <type name="Question">documentRouteElement</type>
+      <type name="BranchedQuestion">documentRouteElement</type>
     </types>
   </extension>
 </component>

@@ -21,21 +21,6 @@
       <deniedSubtypes>
         <type>DocumentRoute</type>
       </deniedSubtypes>
-
-    </type>
-
-    <type id="Survey">
-      <subtypes>
-        <type>BranchedQuestionContainer</type>
-        <type>Question</type>
-      </subtypes>
-    </type>
-
-    <type id="StepFolder">
-      <subtypes>
-        <type>BranchedQuestionContainer</type>
-        <type>Question</type>
-      </subtypes>
     </type>
 
     <type id="Question" coreType="Question">
@@ -51,17 +36,40 @@
       </layouts>
     </type>
 
-    <type id="BranchedQuestionContainer" coreType="BranchedQuestionContainer">
-      <label>BranchedQuestionContainer</label>
+    <type id="BranchedQuestion" coreType="BranchedQuestion">
+      <label>BranchedQuestion</label>
+      <icon>/icons/route.png</icon>
+      <bigIcon>/icons/route_100.png</bigIcon>
+      <default-view>view_documents</default-view>
+      <layouts mode="any">
+        <layout>question</layout>
+      </layouts>
+      <layouts mode="edit">
+        <layout>question</layout>
+      </layouts>
+    </type>
+
+
+    <type id="QuestionBranch" coreType="QuestionBranch">
+      <label>Question Branch</label>
       <icon>/icons/route.png</icon>
       <bigIcon>/icons/route_100.png</bigIcon>
       <default-view>view_documents</default-view>
       <subtypes>
         <type>Question</type>
-      </subtypes>
-      <deniedSubtypes>
         <type>BranchedQuestionContainer</type>
-      </deniedSubtypes>
+      </subtypes>
+    </type>
+
+
+    <type id="BranchedQuestionContainer" coreType="BranchedQuestionContainer">
+      <label>BranchedQuestionContainer</label>
+      <icon>/icons/route.png</icon>
+      <bigIcon>/icons/route_100.png</bigIcon>
+      <default-view>view_documents</default-view>
+       <subtypes>
+        <type>BranchedQuestion</type>
+      </subtypes>
     </type>
 
     <type id="Survey" coreType="Survey">
@@ -74,6 +82,7 @@
       <subtypes>
         <type>Question</type>
         <type>BranchedQuestionContainer</type>
+        <type>BranchedQuestion</type>
       </subtypes>
       <layouts mode="any">
         <layout>heading</layout>

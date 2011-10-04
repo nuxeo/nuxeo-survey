@@ -38,6 +38,9 @@ public class AdapterFactory implements DocumentAdapterFactory {
         if (Constants.QUESTION_DOCUMENT_TYPE.equals(doc.getType())) {
             return new QuestionAdapter(doc);
         }
+        if (Constants.BRANCHED_QUESTION_DOCUMENT_TYPE.equals(doc.getType())) {
+            return new QuestionAdapter(doc);
+        }
         return null;
     }
 
