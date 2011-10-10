@@ -28,10 +28,10 @@
     </doctype>
 
     <doctype name="Question" extends="DocumentRouteStep">
+      <schema name="question" />
     </doctype>
 
     <doctype name="BranchedQuestion" extends="Question">
-      <schema name="question" />
     </doctype>
 
     <doctype name="BranchedQuestionContainer" extends="ConditionalStepFolder">

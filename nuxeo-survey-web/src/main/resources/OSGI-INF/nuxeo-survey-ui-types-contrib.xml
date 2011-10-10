@@ -81,7 +81,6 @@
       <default-view>view_documents</default-view>
       <subtypes>
         <type>Question</type>
-        <type>BranchedQuestionContainer</type>
         <type>BranchedQuestion</type>
       </subtypes>
       <layouts mode="any">

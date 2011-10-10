@@ -25,7 +25,7 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.nuxeo.survery</groupId>
+        <groupId>org.nuxeo.survey</groupId>
         <artifactId>nuxeo-survey-core</artifactId>
         <version>${nuxeo.features.version}</version>
       </dependency>
@@ -42,6 +42,11 @@
       <dependency>
         <groupId>org.nuxeo.ecm.platform</groupId>
         <artifactId>nuxeo-platform-document-routing-core</artifactId>
+        <version>${nuxeo.features.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.ecm.platform</groupId>
+        <artifactId>nuxeo-platform-document-routing-web</artifactId>
         <version>${nuxeo.features.version}</version>
       </dependency>
     </dependencies>
