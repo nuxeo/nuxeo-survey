@@ -14,7 +14,7 @@
  * Contributors:
  *     eugen
  */
-package org.nuxeo.ecm.survey.listners;
+package org.nuxeo.ecm.survey.listeners;
 
 import static org.nuxeo.ecm.survey.Constants.BRANCHED_QUESTION_CONTAINER_DOCUMENT_TYPE;
 import static org.nuxeo.ecm.survey.Constants.BRANCHED_QUESTION_DOCUMENT_TYPE;

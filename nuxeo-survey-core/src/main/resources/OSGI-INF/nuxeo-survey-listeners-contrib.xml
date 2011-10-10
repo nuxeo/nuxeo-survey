@@ -6,7 +6,7 @@
     point="listener">
 
   <listener name="branchedQuestionListener" async="false" postCommit="true"
-    class="org.nuxeo.ecm.survey.listners.BranchedQuestionListener" order="1000">
+    class="org.nuxeo.ecm.survey.listeners.BranchedQuestionListener" order="1000">
     <event>documentCreated</event>
   </listener>
 
