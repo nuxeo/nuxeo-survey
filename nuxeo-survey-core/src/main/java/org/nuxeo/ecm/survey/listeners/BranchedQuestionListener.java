@@ -32,14 +32,12 @@ import org.nuxeo.ecm.survey.Question;
 
 /**
  * @author <a href="mailto:ei@nuxeo.com">Eugen Ionica</a>
- *
  */
 public class BranchedQuestionListener implements EventListener {
 
     public void handleEvent(Event event) throws ClientException {
         String eventName = event.getName();
         EventContext ctx = event.getContext();
-
 
         if (!(ctx instanceof DocumentEventContext)) {
             return;
@@ -63,14 +61,14 @@ public class BranchedQuestionListener implements EventListener {
 
                     // create a FolderStep for each answer
                     Question question = doc.getAdapter(Question.class);
-                    if ( question != null) {
+                    if (question != null) {
                         String[] answers = question.getAnswers();
                         if (answers != null) {
-                            int count =0;
+                            int count = 0;
                             for (String answer : answers) {
                                 DocumentModel d = session.createDocumentModel(
-                                        parent.getPathAsString(), "answer"
-                                                + (++count),
+                                        parent.getPathAsString(),
+                                        "answer" + (++count),
                                         QUESTION_BRANCH_DOCUMENT_TYPE);
                                 d.setPropertyValue("dc:title", answer);
                                 session.createDocument(d);
@@ -80,8 +78,6 @@ public class BranchedQuestionListener implements EventListener {
                 }
             }
         }
-
-
     }
 
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<component name="org.nuxeo.ecm.suvery.core.types" version="1.0">
+<component name="org.nuxeo.ecm.survey.core.types" version="1.0">
 
   <require>org.nuxeo.ecm.platform.routing.CoreExtensions</require>
 
